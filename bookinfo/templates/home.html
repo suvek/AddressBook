@@ -1,0 +1,33 @@
+<h1> list of contacts</h1>
+
+<table style="width: 100%">
+<tr>
+	<td style="width: 3%"> 
+<h4>Sr. No</h4> </a>
+</td>
+<td style="width: 25%"> 
+<h4>Mobile No</h4> </a>
+</td> </tr>
+</table>
+
+{% for list in contact_list%}
+<table style="width: 100%">
+	
+	<tr>
+		<td style="width: 3%"> 
+ {{ list.id}} 
+</td>
+<td style="width: 25%"> 
+<a href="/contact_details/?id={{ list.id }}"> {{ list.mobile}} </a>
+</td>
+	</tr>
+
+</table>
+
+{% endfor %}
+<table style="width: 100%">
+<tr>
+	<td style="width: 5%"></td>
+	<td><a href="/new_contact/"> <input type="submit" value="Add New Contact" /> </a></td>
+</tr>
+</table>
